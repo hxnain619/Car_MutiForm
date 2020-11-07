@@ -1,0 +1,419 @@
+/*custom font*/
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+.main {
+    width: 100%;
+    overflow: hidden;
+}
+
+.progress {
+    height: .5rem !important;
+    border-radius: 0 !important;
+}
+
+.progress-bar {
+    background-color: #1db0f5;
+}
+
+#msform,
+fieldset,
+.fs-title,
+.fs-subtitle,
+.alert {
+    font-family: montserrat, arial, verdana;
+}
+
+
+/*form styles*/
+
+#msform {
+    width: 100%;
+    height: 650px;
+    max-height: 600px;
+    margin: 50px auto;
+    text-align: center;
+    position: relative;
+}
+
+#msform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 3px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    padding: 20px 30px;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0 10%;
+    /*stacking fieldsets above each other*/
+    position: relative;
+}
+
+
+/*Hide all except first fieldset*/
+
+#msform fieldset:not(:first-of-type) {
+    display: none;
+}
+
+#msform input {
+    width: 100%;
+}
+
+#msform div,
+input {
+    padding: 15px;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 13px;
+}
+
+input {
+    background: #f4f4f4;
+    color: #3f3f3f;
+    border: 1px solid transparent;
+    border-top: 1px solid #d6d6d6;
+    border-radius: 2px;
+}
+
+.input-container {
+    position: relative !important;
+    width: 100%;
+    height: 75px !important;
+    margin: 0 auto;
+}
+
+input:not([type='button']) {
+    font-size: 22px;
+    height: 75px;
+}
+
+.input-container input,
+.date-container input {
+    padding-top: 10px !important;
+    padding-left: 50px !important;
+}
+
+.input-container span {
+    float: left;
+}
+
+input[type=date] {
+    padding: 15px !important;
+}
+
+.input-container .price_tag {
+    position: absolute;
+    left: 2em;
+    bottom: -2.8em;
+    font-size: 22px;
+    color: black;
+    height: 75px;
+    width: auto;
+    background: transparent;
+}
+
+.input-parent {
+    margin: 0 auto;
+    width: 100%;
+}
+
+input:focus {
+    border: 1px solid #00afff;
+}
+
+.error {
+    border: 1px solid #df2c21 !important;
+}
+
+.date-container {
+    border: 1px solid transparent;
+    border-top: 1px solid #d6d6d6;
+    box-shadow: none;
+    border-radius: 4px;
+    padding: 0 !important;
+    background: #f4f4f4;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.date-container::after {
+    position: absolute;
+    right: 50%;
+    top: 1.2em;
+    content: "";
+    display: block;
+    height: 60px;
+    width: 1px;
+    background-color: #ddd;
+}
+
+.date-container .row,
+.date-container .col {
+    padding: 0 !important;
+}
+
+.col.col-sm-12.col-md-6.col-lg-6.last_parent {
+    border-left: 5px solid transparent !important;
+}
+
+.date-container span {
+    position: relative;
+    left: 0;
+    font-size: 22px;
+    height: 75px;
+    transform: none;
+    display: block;
+    color: #3f3f3f;
+    background-color: transparent;
+    border: 1px solid transparent;
+    line-height: 4;
+}
+
+.date-container input {
+    border: none;
+    padding: 10px 0 !important;
+    text-align: center;
+}
+
+
+/*buttons*/
+
+#msform .action-button {
+    width: 100px;
+    background: #00afff;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 1px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #1db0f5;
+}
+
+
+/*headings*/
+
+.fs-title {
+    font-size: 32px;
+    color: #2C3E50;
+    padding-bottom: 20px;
+}
+
+.fs-subtitle {
+    font-weight: normal;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+    .fs-title {
+        font-size: 26px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .fs-title {
+        font-size: 18px;
+    }
+}
+
+.options {
+    padding: 8px;
+    margin: 0px;
+    margin-bottom: 10px;
+    border: 1px solid #d6d6d6;
+    border-bottom: 8px solid #d6d6d6;
+    border-radius: 2px;
+    transition: border .5s;
+}
+
+.options:hover {
+    border: 1px solid #00afff;
+    border-bottom: 8px solid #00afff;
+}
+
+.selected {
+    border: 1px solid #00afff;
+    border-radius: 2px;
+    border-bottom: 8px solid #00afff
+}
+
+.tick {
+    display: none;
+    position: absolute;
+    right: 10px;
+    color: #00afff;
+    font-size: 22px;
+}
+
+input,
+button {
+    outline: none;
+}
+
+.alert {
+    display: none;
+    position: fixed;
+    z-index: 90;
+    background: #363636ed;
+    color: #1db0f5 !important;
+}
+
+.fa-close {
+    position: absolute;
+    z-index: 90;
+    background: #717171d9;
+    color: white;
+    font-size: 14px;
+}
+
+.options img {
+    height: auto;
+    width: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+    .options img {
+        height: 60px;
+        width: 60px;
+    }
+    .tick {
+        right: 6px;
+        font-size: 16px;
+    }
+    #msform .action-button {
+        margin: 10px 0 !important;
+    }
+    .input-container span {
+        font-size: 10px;
+    }
+}
+
+.action-button:disabled {
+    background-color: rgb(189, 189, 189) !important;
+}
+
+.submit {
+    background: #00afff;
+    color: white;
+    padding: 20px 10px;
+    filter: drop-shadow(2px 4px 6px gray);
+    border: none;
+    border-radius: 10px;
+    line-height: 1.3;
+    transition: filter .5s;
+    outline: none;
+}
+
+.submit:hover {
+    filter: drop-shadow(0px 0px 6px gray);
+}
+
+.last-page {
+    margin-top: 30px;
+}
+
+.last-page button {
+    margin-top: 20px;
+}
+
+.radio-parent {
+    display: inline-flex;
+    width: 100%;
+}
+
+@media only screen and (min-width: 900px) {
+    .last-page {
+        margin-top: 80px;
+    }
+    .input-container {
+        width: 275px !important;
+    }
+}
+
+input {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.radio {
+    width: 50%;
+    padding: 20px;
+}
+
+.gender {
+    width: 10% !important;
+}
+
+label {
+    float: left;
+}
+
+.check {
+    display: flex;
+    width: 100%;
+}
+
+#check {
+    width: 10% !important;
+}
+
+.check p {
+    width: 90%;
+    text-align: justify;
+    line-height: 1.2;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+    outline: none;
+}
+
+.success {
+    font-size: 30px !important;
+    color: #00afff !important;
+    padding: 20px 30px;
+}
+
+.next,
+.previous {
+    border-radius: 50px !important;
+}
+
+.next {
+    float: right !important;
+}
+
+.previous {
+    float: left !important;
+}
+
+h2 {
+    font-size: 16px;
+    padding: 20px 10px;
+}
+
+.alpha {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    border: 2px solid #00afff;
+    border-radius: 4px;
+    padding: 4px 6px;
+}
+
+@media screen and (min-width: 100px) and (max-width: 700px) {
+    .alpha {
+        left: 5px;
+        top: 5px;
+    }
+}
